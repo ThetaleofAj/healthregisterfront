@@ -11,7 +11,7 @@ function EditHours(){
    const [isLoading,setIsLoading] = useState(true)
 
    useEffect(()=>{
-      fetch(`http://barbara1.pythonanywhere.com/api/edithours/${params.entryId}`,{
+      fetch(`https://barbara1.pythonanywhere.com/api/edithours/${params.entryId}`,{
          method: 'GET',
       })
       .then(res=>res.json())
@@ -29,7 +29,7 @@ function EditHours(){
    },[params.entryId])
 
    const Edit=()=>{
-      fetch(`http://barbara1.pythonanywhere.com/api/edithours/${params.entryId}`,{
+      fetch(`https://barbara1.pythonanywhere.com/api/edithours/${params.entryId}`,{
          method: 'PUT',
          headers: {
             'Content-Type' : 'application/json', 

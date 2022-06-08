@@ -22,7 +22,7 @@ function EntryPage(){
    let params = useParams();
    let navigate = useNavigate()
    useEffect(()=>{
-      fetch(`http://barbara1.pythonanywhere.com/api/entry/${params.entryId}`,{
+      fetch(`https://barbara1.pythonanywhere.com/api/entry/${params.entryId}`,{
          method: 'GET',
       })
       .then(res=>res.json())
@@ -42,7 +42,7 @@ function EntryPage(){
 
    //Edit the main model
    const EditMainModel =()=>{
-      fetch(`http://barbara1.pythonanywhere.com/api/editmain/${params.entryId}`,{
+      fetch(`https://barbara1.pythonanywhere.com/api/editmain/${params.entryId}`,{
          method: 'PUT',
          headers: {
             'Content-Type' : 'application/json', 
@@ -66,7 +66,7 @@ function EntryPage(){
 
    //Adding a Service
    const AddService =()=>{
-      fetch('http://barbara1.pythonanywhere.com/api/addservices/',{
+      fetch('https://barbara1.pythonanywhere.com/api/addservices/',{
          method: 'POST',
          headers: {
             'Content-Type' : 'application/json', 
@@ -86,7 +86,7 @@ function EntryPage(){
 
  //Adding new Equipment
  const AddEquipment=()=>{
-   fetch('http://barbara1.pythonanywhere.com/api/addequipment/',{
+   fetch('https://barbara1.pythonanywhere.com/api/addequipment/',{
       method: 'POST',
       headers: {
          'Content-Type' : 'application/json', 
@@ -106,7 +106,7 @@ function EntryPage(){
 
  //Adding new contact
  const AddContact=()=>{
-   fetch('http://barbara1.pythonanywhere.com/api/addcontact/',{
+   fetch('https://barbara1.pythonanywhere.com/api/addcontact/',{
       method: 'POST',
       headers: {
          'Content-Type' : 'application/json', 
@@ -127,7 +127,7 @@ function EntryPage(){
 
  //
 const AddOperatingHours=()=>{
-   fetch('http://barbara1.pythonanywhere.com/api/addhours/',{
+   fetch('https://barbara1.pythonanywhere.com/api/addhours/',{
       method: 'POST',
       headers: {
          'Content-Type' : 'application/json', 
@@ -148,7 +148,7 @@ const AddOperatingHours=()=>{
 }
 
 const deleteEntry =()=>{
-  fetch(`http://barbara1.pythonanywhere.com/api/entry/${params.entryId}`,{
+  fetch(`https://barbara1.pythonanywhere.com/api/entry/${params.entryId}`,{
 method: 'DELETE',
       })
       .then(data=>data.json())

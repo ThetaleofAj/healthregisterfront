@@ -10,7 +10,7 @@ function EditServices(){
    const [isLoading,setIsLoading] = useState(true)
 
    useEffect(()=>{
-      fetch(`http://barbara1.pythonanywhere.com/api/editservices/${params.entryId}`,{
+      fetch(`https://barbara1.pythonanywhere.com/api/editservices/${params.entryId}`,{
          method: 'GET',
       })
       .then(res=>res.json())
@@ -28,7 +28,7 @@ function EditServices(){
    },[params.entryId])
 
    const Edit =()=>{
-      fetch(`http://barbara1.pythonanywhere.com/api/editservices/${params.entryId}`,{
+      fetch(`https://barbara1.pythonanywhere.com/api/editservices/${params.entryId}`,{
          method: 'PUT',
          headers: {
             'Content-Type' : 'application/json', 
