@@ -59,6 +59,7 @@ function Dashboard(){
          <div>
          <MDBCol md="6">
          <input className="form-control" type="text" placeholder="Search" aria-label="Search" onChange={e=>setSearchItem(e.target.value)} onKeyDown={onSubmit} />
+       <p>Search by Name, Location(Province,District,Ward,), Services, Equipment Offered<p/>
        </MDBCol>
          </div>
          <div className="entryArea">
